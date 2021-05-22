@@ -8,6 +8,9 @@ authors = ["Victor Hugo <victorblog410@gmail.com>"]
 python = "^3.8"
 Django = "^3.2.3"
 djangorestframework = "^3.12.4"
+psycopg2-binary = "^2.8.6"
+pytest-django = "^4.3.0"
+pytest = "^6.2.4"
 
 [tool.poetry.dev-dependencies]
 
