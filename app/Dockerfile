@@ -7,8 +7,9 @@ ENV PYTHONUNBUFFERED 1
 
 
 # set diretorio de trabalho
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+ADD . /app
+
+WORKDIR /app
 
 # install system dependencies
 RUN apt-get update \
@@ -25,6 +26,5 @@ RUN poetry export -f requirements.txt --output requirements.txt
 
 RUN pip install -r requirements.txt
 
-# add app
-COPY . .
+
 
