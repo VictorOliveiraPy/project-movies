@@ -2,6 +2,7 @@
 FROM python:3.9.1-slim-buster
 
 # set diretorio de trabalho
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # variaveis de ambient
@@ -29,6 +30,7 @@ RUN chmod +x /usr/src/app/entrypoint.sh
 
 # add app
 COPY . .
+
 
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
